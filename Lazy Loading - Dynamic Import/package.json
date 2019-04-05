@@ -1,0 +1,23 @@
+{
+  "name": "lazy-loading-dynamic-import",
+  "version": "1.0.0",
+  "description": "Lazy Loading example with dynamic import",
+  "main": "index.html",
+  "scripts": {
+    "start": "parcel index.html --open",
+    "build": "parcel build index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mdn/perf-examples.git"
+  },
+  "author": "garyvh2",
+  "license": "CC0-1.0",
+  "bugs": {
+    "url": "https://github.com/mdn/perf-examples/issues"
+  },
+  "homepage": "https://github.com/mdn/perf-examples#readme",
+  "dependencies": {
+    "parcel": "^1.12.3"
+  }
+}
