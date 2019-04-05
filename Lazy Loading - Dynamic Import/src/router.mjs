@@ -9,12 +9,20 @@ export class Router {
         window.addEventListener('popstate', (event) => this.popstateListener(event), true);
     }
 
+    /**
+     * Listener for window popstate events
+     * @param event popstate event
+     */
     popstateListener(event) {
         if (this.config[location.pathname]) {
             this.renderPage(location.pathname);
         }
     }
 
+    /**
+     * Listener for <a> anchor elements click
+     * @param event 
+     */
     linkListener(event) {
         /** If the element clicked is an anchor */
         if (event.target instanceof HTMLAnchorElement) {
@@ -29,10 +37,23 @@ export class Router {
         }
     }
 
+    /**
+     * Fetches and renders a view based on the url
+     * The router takes the configuration with the format
+     * 
+     * {
+     *   '/pathname': () => import('./view/filename')
+     * }
+     * 
+     * So whenever a route event is triggered, the location is pushed into the history
+     * and the dynamic import of the view is executed
+     * 
+     * Then the outlet innerHTML is set to the view content
+     * 
+     * @param href url
+     */
     renderPage(href) {
-        /** Reset Outlet */
-        this.resetOutlet();
-        /** Fetch and render */
+        /** Fetch and render, dynamically */
         this.config[href]().then((view) => {
             this.setOutletContent(view.default);
             /** Push new state */
@@ -40,10 +61,10 @@ export class Router {
         });
     }
 
-    resetOutlet() {
-        this.outlet.innerHTML = '';
-    }
-
+    /**
+     * sets the HTML content
+     * @param content html content
+     */
     setOutletContent(content) {
         this.outlet.innerHTML = content;
     }    
