@@ -1,3 +1,4 @@
+'use strict';
 import { Router } from './router.mjs';
 
 /** Elements */
