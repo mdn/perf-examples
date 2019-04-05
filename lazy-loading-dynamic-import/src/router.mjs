@@ -67,5 +67,5 @@ export class Router {
      */
     setOutletContent(content) {
         this.outlet.innerHTML = content;
-    }    
+    }
 }
