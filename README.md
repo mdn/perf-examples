@@ -1,6 +1,10 @@
 # Performance examples
 
-Examples related to MDN performance documentation; see https://developer.mozilla.org/en-US/docs/web/Performance
+> [!NOTE]  
+> This repository is archived as of December 2023. 
+> Many thanks to everyone who contributed! 🎉
+>
+> For MDN documentation about performance, see https://developer.mozilla.org/en-US/docs/web/Performance.
 
 ## Demos included
 
